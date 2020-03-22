@@ -1,0 +1,2 @@
+javac -encoding UTF-8 Sudoku.java
+java Sudoku -m 9 -n 2 -i input.txt -o output.txt
