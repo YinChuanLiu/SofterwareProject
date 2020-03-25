@@ -12,17 +12,18 @@ public class Sudoku {
     static Set<Integer> set = null;
 
     public static void main(String[] args) {
-        // 3宫格
+        // m宫格
         int m = Integer.parseInt(args[1]);
-        //n个3宫格 等待解答
+        //n个m宫格 等待解答
         int n = Integer.parseInt(args[3]);
         //输入的文本文件 路径   G:\IdeaProjects\SuanFa\input.txt
-        String inputpath = System.getProperty("user.dir") + File.separator + "input.txt";
+        String inputpath = System.getProperty("user.dir") + File.separator + args[5];
         //输入的文本文件 路径   G:\IdeaProjects\SuanFa\output.txt
-        String outputpath = System.getProperty("user.dir") + File.separator + "output.txt";
+        String outputpath = System.getProperty("user.dir") + File.separator + args[7];
         //文件输入流
         File file = new File(inputpath);
         FileInputStream fileInputStream = null;
+        //字符输出流
         BufferedWriter bw = null;
         try {
             fileInputStream = new FileInputStream(file);
